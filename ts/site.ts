@@ -16,7 +16,8 @@ class ToDoItem{
 window.onload = function(){
     let addItem = document.getElementById("add");
     addItem.onclick = main;
-
+    let clearItem = document.getElementById("clear");
+    clearItem.onclick = clearSavedItems;
     loadSavedItems();
 }
 
@@ -231,4 +232,10 @@ function getToDoItems():ToDoItem[]{
     let itemString = localStorage.getItem(todokey);
     let item:ToDoItem[] = JSON.parse(itemString);
     return item;
+}
+
+function clearSavedItems() {
+    localStorage.clear();
+    document.getElementById("incomplete-items").innerHTML = "";
+    document.getElementById("complete-items").innerHTML = "";
 }

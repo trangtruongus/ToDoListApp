@@ -13,6 +13,8 @@ var ToDoItem = (function () {
 window.onload = function () {
     var addItem = document.getElementById("add");
     addItem.onclick = main;
+    var clearItem = document.getElementById("clear");
+    clearItem.onclick = clearSavedItems;
     loadSavedItems();
 };
 function getInput(id) {
@@ -154,4 +156,9 @@ function getToDoItems() {
     var itemString = localStorage.getItem(todokey);
     var item = JSON.parse(itemString);
     return item;
+}
+function clearSavedItems() {
+    localStorage.clear();
+    document.getElementById("incomplete-items").innerHTML = "";
+    document.getElementById("complete-items").innerHTML = "";
 }

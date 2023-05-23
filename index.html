@@ -10,15 +10,15 @@
 </head>
 <body>
     <h1>ToDo List</h1>
-    <form>
-        <label for="title">Title</label>
+    <form class="myForm">
+        <label class="title-label" for="title">Title</label>
         <input type="text" id="title">
-        <span id="title-err-msg">*</span>
+        <span id="title-err-msg"></span>
         <br>
     
-        <label for="due-date">Due Date</label>
+        <label class="due-date-label "for="due-date">Due Date</label>
         <input type="text" id="due-date">
-        <span id="due-date-err-msg">*</span>
+        <span id="due-date-err-msg"></span>
         <br>
     
         <input id="is-complete" type="checkbox">
@@ -26,6 +26,7 @@
         <br>
     
         <input type="button" id="add" value="Add ToDo Item">
+        <input type="button" id="clear" value="Clear saved items">
     </form>
 
     <h3>ToDo Items</h3>

@@ -1,0 +1,77 @@
+
+.myForm{
+    width: 40%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.todo{
+    width: 20%;
+    box-sizing: border-box;
+    color: white;
+    background-color: red;
+    padding: .5em;
+    border-radius: .75em;
+    margin: 1em;
+    cursor: pointer;
+
+}
+
+.todo h3{
+    margin: 0px;
+}
+
+.todo p{
+    margin: 0px;
+}
+
+.completed{
+    opacity: 35%;
+    color: white;
+    background-color: blue;
+    text-decoration: line-through;
+}
+
+#complete-items{
+    border: .15em solid blue;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#incomplete-items{
+    border: .15em solid red;
+    width: 50%;
+    box-sizing:border-box;
+}
+
+#all-items{
+    display:flex;
+}
+
+#complete-items, 
+#incomplete-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#title-err-msg, #due-date-err-msg {
+    color: red;
+}
+
+.title-label {
+  margin-right: 31px;
+}
+
+input[type=button], input[type=text] {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: 30px;
+    width: 130px;
+    border-radius: 5px;
+}
