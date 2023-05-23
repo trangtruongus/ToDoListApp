@@ -2,11 +2,14 @@
 const picker = datepicker("#due-date",{
     formatter: (input, date, _) => {
         const value = date.toLocaleDateString()
-        input.value = value // => '1/1/2099'
+        input.value = value 
     }
 });
 picker.setMin(new Date()); // Set to today's date
 
+/**
+ * Represents a ToDo Item
+ */
 class ToDoItem{
     title:string;
     dueDate:Date;
@@ -34,7 +37,6 @@ function loadSavedItems(){
             displayToDoItem(currItem);
         }
     }
-    
 }
 
 function main(){
@@ -102,8 +104,6 @@ function getToDoItem():ToDoItem{
 
     return myItem;
 }
-
-
 
 /**
  * Display given ToDoItem on the web page
@@ -179,9 +179,8 @@ function toggleComplete(){
 }
 
 /**
- * Clear all current todos from storage
- * and save a new list
- * @param allTodos The list to save
+ * Clear all current Todo Items from storage and save a new list
+ * @param allTodos The list of Todo Items to be saved
  */
 function saveAllTodos(allTodos: ToDoItem[]) {
     localStorage.setItem(todokey, ""); // Clear current items
@@ -234,6 +233,9 @@ function getToDoItems():ToDoItem[]{
     return item;
 }
 
+/**
+ * Clear saved ToDo Items
+ */
 function clearSavedItems() {
     localStorage.clear();
     document.getElementById("incomplete-items").innerHTML = "";
