@@ -6,10 +6,8 @@
     margin-right: auto;
 }
 
-
-
 .todo{
-    width: 20%;
+    width: 40%;
     box-sizing: border-box;
     color: white;
     background-color: red;
@@ -74,4 +72,9 @@ input[type=button], input[type=text] {
     height: 30px;
     width: 130px;
     border-radius: 5px;
+}
+
+#add {
+    background-color: blue;
+    color: white;
 }
